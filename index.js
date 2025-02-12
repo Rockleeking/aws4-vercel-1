@@ -2,6 +2,11 @@ const aws4 = require('aws4');
 const { URL } = require('url');
 
 module.exports = async (req, res) => {
+    // Ensure only POST requests are allowed
+    if (req.method !== 'POST') {
+        return res.status(405).json({ error: 'Method Not Allowed' });
+    }
+
     try {
         // Parse the request body
         const { accessKey, secretKey, region, httpMethod, url, body } = req.body;
