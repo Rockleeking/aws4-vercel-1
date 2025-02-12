@@ -1,0 +1,8 @@
+{
+  "name": "aws4-vercel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "aws4": "^1.11.0"
+  }
+}
